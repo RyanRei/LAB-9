@@ -1,0 +1,37 @@
+#1
+D={}
+D['name']=input('Enter name: ')
+D['gender']=input('Enter gender: ')
+D['age']=int(input('Enter age: '))
+D['occupation']=input('Enter occupation: ')
+print(D['age'])
+for (key, value) in D.items():
+    print(key, value)
+theKeys =list(D.keys())
+theKeys.sort()
+for key in theKeys:
+    print(key, D[key])
+   
+#2
+def equation(x):
+    return x**3+2*x-1
+
+numbers = (1,2,3,4)
+result = map(equation, numbers)
+print(list(result))
+
+#3
+x = lambda g: g**3+2*g-1
+print(x(2))
+
+#4
+def MultOf3(x): return x % 3==0
+list(filter(MultOf3,range(50)))
+
+#5
+from functools import reduce
+def add(x,y): return x+y
+def mult(x,y): return x*y
+data = [1,2,3,4]
+print(reduce(add,data))
+print(reduce(mult,data))
